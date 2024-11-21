@@ -4,162 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codeartisan | All About Codes | Home</title>
-    <link rel="stylesheet" href="Assets/CSS/bootstrap.min.css">
     <link rel="icon" type="image/png" href="FJ-Favicon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="FJ-Favicon.png" sizes="32x32">
     <link rel="icon" type="image/png" href="FJ-Favicon.png" sizes="64x64">
-    <style>
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.main {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to right, #0a02a7, #030936);
-}
-nav {
-    width: 90%;
-    position: sticky;
-    margin: 20px auto;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-}
-.logo {
-    flex-basis: 20%;
-}
-.logo img {
-    width: 180px;
-}
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-.information {
-    width: 1000px;
-    height: 1000px;
-    position: absolute;
-    top: 50%;
-    left: -5%;
-    transform: translateY(-50%);
-}
-#circle{
-    width: 1000px;
-    height: 1000px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    transform: rotate(0deg);
-    transition: 1s;
-}
-.feature img {
-    width: 70px;
-}
-.feature {
-    position: absolute;
-    color: #fff;
-}
-.feature div {
-    margin-left: 30px;
-}
-.feature div p{
-    margin-top: 8px;
-}
-.one {
-    top: 410px;
-    right: 0px;
-}
-.two {
-    top: 150px;
-    left: 395px;
-    transform: rotate(-90deg);
-}
-.three {
-    bottom: 412px;
-    left: 55px;
-    transform: rotate(-180deg);
-}
-.four {
-    bottom: 90px;
-    left: 360px;
-    transform: rotate(-270deg);
-}
-.mobile {
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-.controls {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-.controls h3 {
-    margin: 15px 0;
-    color: #fff;
-}
-#upBtn {
-    width: 20px;
-    cursor: pointer;
-    transform: rotate(270deg);
-}
-#downBtn {
-    width: 20px;
-    cursor: pointer;
-    transform: rotate(90deg);
-}
-.overlay {
-    width: 0;
-    height: 0;
-    border-top: 500px solid #fff;
-    border-right: 500px solid transparent;
-    border-bottom: 500px solid #fff;
-    border-left: 500px solid #fff;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-h1{
-    color: #fff;
-    font-size: 2.7em;
-}
-h2{
-    font-size: 1.5em;
-    line-height: 1.5em;
-    color: #fff;
-}
-p, h3 {
-        font-size: 1.1em;
-        color: #fff;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Hide on medium screens and up -->
-  <div class="d-block d-md-none">
+  <div class="small">
     This Web page is only visible on <strong>LARGE SCREENS</strong>
   </div>
   <!-- Hide on small screens -->
-  <div class="d-none d-md-block">
+  <div class="large">
     <div class="main">
       <nav>
           <div class="logo">
@@ -205,24 +61,6 @@ p, h3 {
       </div>
   </div>
   </div>
-    
-
-    <script>
-      const circle = document.getElementById("circle");
-      const upBtn = document.getElementById("upBtn");
-      const downBtn = document.getElementById("downBtn");
-      let rotateValue = 0;
-
-      upBtn.addEventListener("click", () => {
-          rotateValue -= 90;
-          circle.style.transform = `rotate(${rotateValue}deg)`;
-      });
-
-      downBtn.addEventListener("click", () => {
-          rotateValue += 90;
-          circle.style.transform = `rotate(${rotateValue}deg)`;
-      });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
